@@ -594,6 +594,10 @@ span.current {
     min-height: 182px;
 }
 
+.gallery_img:hover {
+    transform: scale(1.1 , 1.1);
+}
+
 .gallery_box {
     width: 100%;
     float: left;
