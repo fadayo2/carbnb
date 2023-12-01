@@ -17,7 +17,7 @@ var userData;
 var gottenData
 const signup = () =>{
     if(email.value === '' && username.value === '' && password.value === '') {
-        alert("input fields cnnot be empty")
+        alert("input fields cannot be empty")
         email.style.borderColor = 'black';
         username.style.borderColor = 'black';
         password.style.borderColor = 'black';
@@ -31,8 +31,8 @@ const signup = () =>{
 
         gottenData = JSON.parse(localStorage.getItem('data'))
 
-        window.location.href = 'index.html';
-        
-        alert(`Welcome ${userData.userName}`);
+        window.location.href = 'redirect.html';
+
+        // alert(`Welcome ${userData.userName}`);
     }
 }

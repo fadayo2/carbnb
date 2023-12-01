@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/addvehicle.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <!-- shoelace cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.12.0/cdn/themes/light.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.12.0/cdn/shoelace-autoloader.js"></script>
+    <!-- fontawsome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Uploadcare cdn -->
+    <script>
+        UPLOADCARE_PUBLIC_KEY = 'demopublickey';
+    </script>
+    <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
+</head>
+<body>
+    <a href="index.html">Carbnb</a>&ensp;<span style="font-size: 30px;font-family: 'Playpen Sans', cursive;">Lease</span>
+    <hr>
+    <section class="sect">
+        <div class="form">
+            <form action="">
+                <div>
+                    <header>
+                        <h1>User Details</h1>
+                    </header>
+                    <label for="firstname">Firstname</label>
+                    <input type="text" placeholder="enter your firstname">
+                    <label for="Lastname">Lastname</label>
+                    <input type="text" placeholder="enter your lastname">
+                    <label for="address">Address 1</label>
+                    <input type="text" placeholder="enter your address">
+                    <label for="address">Address 2 </label>
+                    <input type="text" placeholder="optional" style="margin-bottom: 10px;">
+                    <sl-select label="Select gender" style="font-family: 'Oswald', sans-serif;">
+                        <sl-option value="option-1">Male</sl-option>
+                        <sl-option value="option-2">Female</sl-option>
+                        <sl-option value="option-3">Other</sl-option>
+                    </sl-select>
+                    <label for="username">Username</label>
+                    <input type="text" placeholder="enter your username">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="enter your password">
+                    <!-- <label for="password">Password</label> -->
+                    <input type="password" placeholder="confirm password">
+                    <header>
+                        <h1>Car Details</h1>
+                    </header>
+                    <label for="carName">Car name</label>
+                    <input type="text" placeholder="Car name">
+                    <label for="carBrand">Car brand</label>
+                    <input type="text" placeholder="Car brand">
+                    <label for="carBrand">Car year</label>
+                    <input type="text" placeholder="Car year" maxlength="4" style="margin-bottom: 20px;">
+                    <sl-select label="As it being in any major/minor accident before" style="font-family: 'Oswald', sans-serif;">
+                        <sl-option value="option-1">Yes</sl-option>
+                        <sl-option value="option-2">No</sl-option>
+                    </sl-select>
+                    <sl-select label="Select your leasing plan" style="font-family: 'Oswald', sans-serif;margin-top: 20px;">
+                        <sl-option value="option-1">Yearly</sl-option>
+                        <sl-option value="option-2">Monthly</sl-option>
+                        <sl-option value="option-2">Weekly</sl-option>
+                        <sl-option value="option-2">Daily</sl-option>
+                        <sl-option value="option-2">Hourly</sl-option>
+                    </sl-select>
+                    <sl-select label="How do you want to recieve payment" style="font-family: 'Oswald', sans-serif;margin-top: 20px;">
+                        <sl-option value="option-1">By transfer</sl-option>
+                        <sl-option value="option-2">Cash</sl-option>
+                    </sl-select>
+                    <label for="comment">write out what you want the driver to know about your car</label>
+                    <textarea name="" id="" cols="70" rows="10" placeholder="This is optional but will help renters understand the condition of your vehicle"></textarea>
+                    <label for="pickupAddress">Put in a Pickup address for the driver. Note: <span style="color: #FE5B29;">this can be changed later</span></label>
+                    <input type="text" placeholder="Pickup address">
+                    <button>Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="Box">
+            <div class="imageBox" id="imageBox">
+                <h1 style="color: #FE5B29;" id="txt">Select an image of the car</h1>
+            </div>
+            <!--  -->
+            <!--  -->
+            <!--  -->
+            <div class="file">
+                    <input type="file" name="file"  id="file" accept="image/*" onchange="loadFile(event)" style="display: none;">
+                    <label for="file" style="cursor: pointer;">Upload Image</label>
+
+            </div>
+        </div>
+    </section>
+
+
+    <script src="./js/addvehicle.js"></script>
+</body>
+</html>

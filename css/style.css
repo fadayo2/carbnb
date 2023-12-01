@@ -1116,10 +1116,3 @@ textarea#comment::placeholder {
 .copyright_text a:hover {
     color: #fe5b29;
 }
-
-
-/* copyright section end */
-
-.margin_top90 {
-    margin-top: 90px;
-}

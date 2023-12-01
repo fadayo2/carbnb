@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.sect {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.form,.Box {
+    width: 50vw;
+    height: 90vh;
+}
+.form {
+    overflow-y: scroll;
+}
+.form div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-left: 30px;
+
+    & label {
+        font-family: 'Oswald', sans-serif;
+        margin-top: 30px;
+        margin-bottom: 5px;
+    }
+    & input {
+        padding: 15px;
+        width: 40vw;
+        font-family: sans-serif;
+        border: none;
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+        background: none;
+    }
+    & input:focus {
+        outline: none;
+    }
+    & header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40vw;
+        font-family: 'Oswald', sans-serif;
+        margin-top: 20px;
+    }
+    & button {
+        padding: 10px;
+        margin-top: 30px;
+        width: 150px;
+        cursor: pointer;
+        font-weight: 600;
+        font-family: 'Oswald', sans-serif;
+        font-size: 17px;
+        background: none;
+        border: 0.5px solid gray;
+        color: #FE5B29;
+    }
+    & textarea {
+        color: #FE5B29;
+        border: 1px dotted black;
+        font-family: 'Oswald', sans-serif;
+        font-size: 17px;
+        border-radius: 0px;
+    }
+    & textarea:focus {
+        outline: none;
+    }
+}
+
+.Box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    & .imageBox {
+        width: 50vw;
+        height: 500px;
+        /* clip-path: polygon(100% 0%, 100% 60.25%, 50% 74.04%, 0% 60.25%, 0.18% 0.46%); */
+        background-color: #000000;
+        display: flex;
+        align-items: center;
+        font-family: 'Oswald', sans-serif;
+        justify-content: center;
+        background-size: cover;
+    }
+    & .file {
+        /* position: absolute; */
+        /* top: 410px; */
+        width: 50vw;
+        border-bottom: 1px solid black;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        & label {
+            color: white;
+            background-color: #FE5B29;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: 'Oswald', sans-serif;
+        }
+    }
+}
+a {
+    font-size: 30px;
+    text-decoration: none;
+    background: #FE5B29;
+    background: linear-gradient(to right, #FE5B29 0%, #CF4015 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    font-family: 'Playpen Sans', cursive;
+}
+
+@media (max-width:1061px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: none;
+    }
+    body {
+        overflow-y: scroll;
+    }
+    .sect {
+        flex-direction: column-reverse;
+
+        & .form {
+            overflow: none;
+            /* height: max-content; */
+            width: 100vw;
+            margin-top: 20px;
+
+            & input {
+                width: 80vw;
+            }
+
+            & header {
+                width: 90vw;
+            }
+
+            & textarea {
+                width: 90vw;
+                height: 30vh;
+            }
+        }
+    }
+
+    .Box .imageBox {
+        width: 100vw;
+        height: 50vh;
+    }
+
+    .Box .file {
+        /* position: static; */
+        /* margin-top: 330px; */
+        border: none;
+        height: auto;
+    }
+}
+
+
+

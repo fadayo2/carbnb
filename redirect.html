@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/redirect.css">
+    <!-- shoelace cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.12.0/cdn/themes/light.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.12.0/cdn/shoelace-autoloader.js"></script>
+      <!-- AOS cdn -->
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body onload="load()">
+    <div data-aos="zoom-in-up">
+        <sl-spinner style="font-size: 5rem;--indicator-color: #ffffff;--track-width: 10px;"></sl-spinner>
+        <h2 id="id"></h2>
+    </div>
+
+
+    <script src="./js/redirect.js"></script>
+    <!-- AOS initialize -->
+    <script>
+        AOS.init();
+     </script>
+</body>
+</html>
