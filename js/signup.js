@@ -17,11 +17,132 @@ var userData;
 var gottenData
 const signup = () =>{
     if(email.value === '' && username.value === '' && password.value === '') {
-        alert("input fields cannot be empty")
-        email.style.borderColor = 'black';
-        username.style.borderColor = 'black';
-        password.style.borderColor = 'black';
-    } else {
+        var notyf = new Notyf(
+            {
+                duration: 3000,
+                position : {
+                    x : 'center',
+                    y : 'top'
+                },
+                
+                dismissible: true,
+            }
+        );
+        // Display an error notification
+        notyf.error('You must fill out the form before moving forward');
+
+        // Display a success notification
+        // notyf.success('Your changes have been successfully saved!');
+    } 
+    else if (username.value === '' && password.value === '') {
+        var notyf = new Notyf(
+            {
+                duration: 3000,
+                position : {
+                    x : 'center',
+                    y : 'top'
+                },
+                
+                dismissible: true,
+            }
+        );
+        // Display an error notification
+        notyf.error('username and password is empty');
+
+        // Display a success notification
+        // notyf.success('Your changes have been successfully saved!');
+    }
+    else if (username.value === '' && email.value === '') {
+        var notyf = new Notyf(
+            {
+                duration: 3000,
+                position : {
+                    x : 'center',
+                    y : 'top'
+                },
+                
+                dismissible: true,
+            }
+        );
+        // Display an error notification
+        notyf.error('username and email is empty');
+
+        // Display a success notification
+        // notyf.success('Your changes have been successfully saved!');
+    }
+    else if (email.value === '' && password.value === '') {
+        var notyf = new Notyf(
+            {
+                duration: 3000,
+                position : {
+                    x : 'center',
+                    y : 'top'
+                },
+                
+                dismissible: true,
+            }
+        );
+        // Display an error notification
+        notyf.error('email and password is empty');
+
+        // Display a success notification
+        // notyf.success('Your changes have been successfully saved!');
+    }
+    else if (email.value === '') {
+        var notyf = new Notyf(
+            {
+                duration: 3000,
+                position : {
+                    x : 'center',
+                    y : 'top'
+                },
+                
+                dismissible: true,
+            }
+        );
+        // Display an error notification
+        notyf.error('Email is empty');
+
+        // Display a success notification
+        // notyf.success('Your changes have been successfully saved!');
+    } 
+    else if (username.value === '') {
+        var notyf = new Notyf(
+            {
+                duration: 3000,
+                position : {
+                    x : 'center',
+                    y : 'top'
+                },
+                
+                dismissible: true,
+            }
+        );
+        // Display an error notification
+        notyf.error('Username is empty');
+
+        // Display a success notification
+        // notyf.success('Your changes have been successfully saved!');
+    }
+    else if (password.value === '') {
+        var notyf = new Notyf(
+            {
+                duration: 3000,
+                position : {
+                    x : 'center',
+                    y : 'top'
+                },
+                
+                dismissible: true,
+            }
+        );
+        // Display an error notification
+        notyf.error('Password is empty');
+
+        // Display a success notification
+        // notyf.success('Your changes have been successfully saved!');
+    }
+    else {
         userData = {
             userEmail:email.value,
             userName:username.value,

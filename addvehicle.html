@@ -17,67 +17,73 @@
         UPLOADCARE_PUBLIC_KEY = 'demopublickey';
     </script>
     <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
+
+    <!-- notyf css cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+
+    <!-- AOS cdn -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <a href="index.html">Carbnb</a>&ensp;<span style="font-size: 30px;font-family: 'Playpen Sans', cursive;">Lease</span>
     <hr>
     <section class="sect">
         <div class="form">
-            <form action="">
                 <div>
                     <header>
                         <h1>User Details</h1>
                     </header>
                     <label for="firstname">Firstname</label>
-                    <input type="text" placeholder="enter your firstname">
+                    <input id="fName" type="text" placeholder="enter your firstname">
                     <label for="Lastname">Lastname</label>
-                    <input type="text" placeholder="enter your lastname">
+                    <input id="lName" type="text" placeholder="enter your lastname">
                     <label for="address">Address 1</label>
-                    <input type="text" placeholder="enter your address">
+                    <input id="add1" type="text" placeholder="enter your address">
                     <label for="address">Address 2 </label>
-                    <input type="text" placeholder="optional" style="margin-bottom: 10px;">
-                    <sl-select label="Select gender" style="font-family: 'Oswald', sans-serif;">
-                        <sl-option value="option-1">Male</sl-option>
-                        <sl-option value="option-2">Female</sl-option>
-                        <sl-option value="option-3">Other</sl-option>
+                    <input id="add2" type="text" placeholder="optional" style="margin-bottom: 10px;">
+                    <sl-select id="gender" label="Select gender" style="font-family: 'Oswald', sans-serif;">
+                        <sl-option value="Male">Male</sl-option>
+                        <sl-option value="Female">Female</sl-option>
+                        <sl-option value="Other">Other</sl-option>
                     </sl-select>
                     <label for="username">Username</label>
-                    <input type="text" placeholder="enter your username">
+                    <input id="uName" type="text" placeholder="enter your username">
                     <label for="password">Password</label>
-                    <input type="password" placeholder="enter your password">
+                    <input id="pWord" type="password" placeholder="enter your password">
                     <!-- <label for="password">Password</label> -->
-                    <input type="password" placeholder="confirm password">
+                    <input id="conPword" type="password" placeholder="confirm password">
                     <header>
                         <h1>Car Details</h1>
                     </header>
                     <label for="carName">Car name</label>
-                    <input type="text" placeholder="Car name">
+                    <input id="cName" type="text" placeholder="Car name">
                     <label for="carBrand">Car brand</label>
-                    <input type="text" placeholder="Car brand">
+                    <input id="cBrand" type="text" placeholder="Car brand">
                     <label for="carBrand">Car year</label>
-                    <input type="text" placeholder="Car year" maxlength="4" style="margin-bottom: 20px;">
-                    <sl-select label="As it being in any major/minor accident before" style="font-family: 'Oswald', sans-serif;">
-                        <sl-option value="option-1">Yes</sl-option>
-                        <sl-option value="option-2">No</sl-option>
+                    <input id="cYear" type="text" placeholder="Car year" maxlength="4" style="margin-bottom: 20px;">
+                    <sl-select id="acc" label="As it being in any major/minor accident before" style="font-family: 'Oswald', sans-serif;">
+                        <sl-option value="Yes">Yes</sl-option>
+                        <sl-option value="No">No</sl-option>
                     </sl-select>
-                    <sl-select label="Select your leasing plan" style="font-family: 'Oswald', sans-serif;margin-top: 20px;">
-                        <sl-option value="option-1">Yearly</sl-option>
-                        <sl-option value="option-2">Monthly</sl-option>
-                        <sl-option value="option-2">Weekly</sl-option>
-                        <sl-option value="option-2">Daily</sl-option>
-                        <sl-option value="option-2">Hourly</sl-option>
+                    <sl-select id="leasePlan" label="Select your leasing plan" style="font-family: 'Oswald', sans-serif;margin-top: 20px;">
+                        <sl-option value="Yearly">Yearly</sl-option>
+                        <sl-option value="Monthly">Monthly</sl-option>
+                        <sl-option value="Weekly">Weekly</sl-option>
+                        <sl-option value="Daily">Daily</sl-option>
+                        <sl-option value="Hourly">Hourly</sl-option>
                     </sl-select>
-                    <sl-select label="How do you want to recieve payment" style="font-family: 'Oswald', sans-serif;margin-top: 20px;">
-                        <sl-option value="option-1">By transfer</sl-option>
-                        <sl-option value="option-2">Cash</sl-option>
+                    <sl-select id="payMethod" label="How do you want to recieve payment" style="font-family: 'Oswald', sans-serif;margin-top: 20px;">
+                        <sl-option value="By-transfer">By transfer</sl-option>
+                        <sl-option value="Cash">Cash</sl-option>
                     </sl-select>
                     <label for="comment">write out what you want the driver to know about your car</label>
-                    <textarea name="" id="" cols="70" rows="10" placeholder="This is optional but will help renters understand the condition of your vehicle"></textarea>
+                    <textarea name="" id="comment" cols="70" rows="10" placeholder="This is optional but will help renters understand the condition of your vehicle"></textarea>
                     <label for="pickupAddress">Put in a Pickup address for the driver. Note: <span style="color: #FE5B29;">this can be changed later</span></label>
-                    <input type="text" placeholder="Pickup address">
-                    <button>Submit</button>
+                    <input id="pAddress" type="text" placeholder="Pickup address">
+                    <button onclick="sub()">Submit</button>
                 </div>
-            </form>
+            
         </div>
 
         <div class="Box">
@@ -95,7 +101,34 @@
         </div>
     </section>
 
+    <section class="confirmatonbg" id="confirmatonbg" data-aos="zoom-in">
+        <video src="video/pexels-kęstutis-paškevičius-19251142 (1080p).mp4" autoplay loop></video>
+    </section>
 
+    <div class="confirmatonBox" id="confirmatonBox">
+        <img src="https://media3.giphy.com/media/7hAr7m8m7k3uumlu4G/giphy.gif" alt="" width="100px" style="margin-bottom: -280px;"> 
+        <h1>Are you okay with the information you provided</h1>
+
+        <div>
+            <button onclick="confirmed()">Yes</button>
+            <button onclick="notConfirmed()">No</button>
+        </div>
+    </div>  
+
+    <div class="redirecting" id="redirecting" data-aos="flip-left">
+        <sl-spinner style="font-size: 5rem;--indicator-color: #ffffff;--track-width: 10px;"></sl-spinner>
+        <br><br>
+        <h1 style="font-family: 'Oswald', sans-serif; color: #ffffff;">Redirecting you to your dashboard</h1>
+    </div>
+
+    <!-- notyf js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+
+    <!-- AOS initialize -->
+    <script>
+        AOS.init();
+     </script>
+    
     <script src="./js/addvehicle.js"></script>
 </body>
 </html>
